@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tain Time</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-white bg-dark text-center">
+            <h1>Anytime is Train Time</h1>
+            <h6>Choo Choo. Chee Chee</h6>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card border-primary">
+                    <div class="card-header bg-primary text-white">
+                        Current train Schedule
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency (min)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="card border-primary">
+                    <div class="card-header bg-primary text-white">
+                        Add Train
+                    </div>
+                    <div class="card-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="name-input">Train Name</label>
+                                <input class="form-control" id="name-input" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="town-input">Destination</label>
+                                <input class="form-control" id="town-input" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="time-input">First Train Time (HH:mm - military time)</label>
+                                <input class="form-control" id="time-input" type="number">
+                            </div>
+                            <div class="form-group">
+                                <label for="often-input">Frequency (min)</label>
+                                <input class="form-control" id="often-input" type="number">
+                            </div>
+                            <div class="text-right">
+                                <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
