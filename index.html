@@ -27,6 +27,8 @@
                                 <tr>
                                     <th>Train Name</th>
                                     <th>Destination</th>
+                                    <th>First Train</th>
+                                    <th>Last Train</th>
                                     <th>Frequency (min)</th>
                                     <th>Next Arrival</th>
                                     <th>Minutes Away</th>
@@ -55,12 +57,16 @@
                                 <input class="form-control" id="town-input" type="text">
                             </div>
                             <div class="form-group">
-                                <label for="time-input">First Train Time (HH:mm - military time)</label>
+                                <label for="time-input">First Train Time (HHmm - military time)</label>
                                 <input class="form-control" id="time-input" type="number">
                             </div>
                             <div class="form-group">
                                 <label for="often-input">Frequency (min)</label>
                                 <input class="form-control" id="often-input" type="number">
+                            </div>
+                            <div class="form-group">
+                                <label for="runs-input">Number of Runs</label>
+                                <input class="form-control" id="runs-input" type="number">
                             </div>
                             <div class="text-right">
                                 <button class="btn btn-primary" id="submit" type="submit">Submit</button>
@@ -68,6 +74,7 @@
                         </form>
                     </div>
                 </div>
+                <br>
             </div>
         </div>
     </div>
