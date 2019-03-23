@@ -66,15 +66,16 @@ database.ref().on("child_added", function(childSnapshot){
     var cLastTime = cFirstTime.add(frequency*(totalRuns-1), "minutes");
     // the line above will also change the val of cFirstTime !!!
     console.log(cLastTime.format("HH:mm"));
+    console.log(moment().diff(cLastTime, "minutes"));
     // if time now is between first and last
-    if(moment().diff(moment(firstTime,"HHmm"))>0 && Math.floor(moment().diff(cFirstTime,"minutes")/frequency)<totalRuns){
+    if(moment().diff(moment(firstTime,"HHmm"))>0 && Math.floor(moment().diff(moment(firstTime, "HHmm"),"minutes")/frequency)<totalRuns-1){
         minAway =  frequency - diffNow % frequency;
         nextTime = moment().add(minAway, "minutes").format("HH:mm");
         // if time now is earlier than first
     }else if(moment().diff(moment(firstTime,"HHmm"), "minutes")<=0){
         nextTime = moment(firstTime, "HHmm").format("HH:mm");
         minAway = moment(firstTime, "HHmm").diff(moment(), "minutes");
-        // if time now is later than first but earlier than last (next day)
+        // if time now is later than last
     }else{
         nextTime = moment(firstTime, "HHmm").format("HH:mm");
         minAway = moment("2400", "HHmm").diff(moment(), "minutes") + moment(firstTime, "HHmm").diff(moment("0000", "HHmm") ,"minutes")
