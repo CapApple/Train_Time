@@ -14,3 +14,7 @@ label{
     height: 260px;
     overflow: auto;
 }
+
+body{
+    background-color: azure;
+}
